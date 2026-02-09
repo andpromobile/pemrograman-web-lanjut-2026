@@ -59,7 +59,8 @@ $row=$query->fetchAll(PDO::FETCH_OBJ); //outputadalaharray
                             <?= ($mahasiswa->status_kredit)?'Kredit' :'Tunai';?>
                         </td>
                         <td>
-                            <a href="http://localhost/php/pdo/show_profile.php?id=<?=$mahasiswa->id;?>">Detail</a>
+                            <a href="http:
+                            //localhost/php/pdo/show_profile.php?id=<?=$mahasiswa->id;?>">Detail</a>
                         </td>
                     </tr>
                     <?php endforeach;?>

@@ -1,7 +1,7 @@
 <?php
 $db = require_once('koneksi.php');
 
-$id = $_GET['tanggal'];
+$id = $_GET['id'];
 $sql = "SELECT * FROM profile where id=$id";
 
 $query = $db->prepare($sql);
