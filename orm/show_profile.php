@@ -1,7 +1,8 @@
 <?php
-require_once'orm/ProfileORM.php';
-require_once'orm/AsalSekolahORM.php';
-require_once'helper.php';
+require_once 'ProfileORM.php';
+require_once 'AsalSekolahORM.php';
+require_once 'helper.php';
+
 $id=$_GET['id'];//diambildariurlparameterget
 $profile= ProfileORM::findOne($id);//outputadalaharray
 if(!$profile){
