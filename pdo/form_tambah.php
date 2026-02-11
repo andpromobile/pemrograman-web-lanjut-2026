@@ -16,8 +16,7 @@ plugin@1.14.16/dist/jquery.mask.min.js"></script>
     <h1> Silahkan isikan form data anda </h1>
     
     <form method="post" action="http://localhost/php/pdo/save.php">
-        <input type="text" name="tanggal" id="datepicker" placeholder="Tan
-ggal Bayar">
+        <input type="text" name="tanggal" id="datepicker" placeholder="Tanggal Bayar">
         <input type="text" name="nama" placeholder="nama lengkap">
         <input type="text" name="alamat" placeholder="alamat">
         <input type="text" name="jumlah" placeholder="Jumlah Bayar" class="money">

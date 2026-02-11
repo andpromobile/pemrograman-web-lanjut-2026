@@ -57,8 +57,7 @@ scale=1.0">
     <div class="row">
         <div style="float:left; margin-right: 20px"><b><a href="http://localhost/php/pdo/form_edit.php?id=<?=
 $id; ?>">Edit</a></b></div>
-        <div div style="float:left"><b><a href="http://localhost/php/pd
-o/delete.php?id=<?= $id; ?>" style="color: red">Delete</a></b></div>
+        <div div style="float:left"><b><a href="http://localhost/php/pdo/delete.php?id=<?= $id; ?>" style="color: red">Delete</a></b></div>
     </div>
 </body>
 
