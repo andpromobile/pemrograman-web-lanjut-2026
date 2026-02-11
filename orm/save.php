@@ -1,5 +1,5 @@
 <?php
-require_once 'orm/ProfileORM.php';
+require_once 'ProfileORM.php';
 //siapkan data baru
 $profile = ProfileORM::create();
 //konversi array jadi object dari $_POST['xx'] menjadi $post->xx;

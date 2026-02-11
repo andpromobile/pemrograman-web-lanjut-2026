@@ -1,5 +1,5 @@
 <?php
-require_once 'orm/AsalSekolahORM.php';
+require_once 'AsalSekolahORM.php';
 //ambil seluruh record dengan menggunakan tabel orm asal
 // sekolah dan simpan di variable
 $list_asal_sekolah = AsalSekolahORM::findMany();
@@ -11,50 +11,43 @@ $list_asal_sekolah = AsalSekolahORM::findMany();
     <title>Form Mahasiswa</title>
     <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js">
     </script>
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdel
-ivr.net/npm/pikaday/css/pikaday.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.
-1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/jquery-mask
-plugin@1.14.16/dist/jquery.mask.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-maskplugin@1.14.16/dist/jquery.mask.min.js"></script>
 </head>
 
 <body>
     <h1> Silahkan isikan form data anda </h1>
     <form method="post" action="http://localhost/php/orm/save.php">
-        <input type="text" name="tanggal" id="datepicker" placehol der="Tanggal Bayar">
+        <input type="text" name="tanggal" id="datepicker" placeholder="Tanggal Bayar">
         <input type="text" name="nama" placeholder="nama lengkap">
         <input type="text" name="alamat" placeholder="alamat">
-        <input type="text" name="jumlah" placeholder="Jumlah Bayar
-" class="money">
+        <input type="text" name="jumlah" placeholder="Jumlah Bayar" class="money">
         <div style="margin-top: 1em">
             <label><b>Asal Sekolah : </b></label>
-            <span style="margin-top: 0; ">
+            <span style="margin-top:0;">
                 <select name="asal_sekolah_id">
                     <?php foreach ($list_asal_sekolah as $asal_sekolah) : ?>
-                    <option value="<?= $asal_sekolah
->id; ?>">
+                    <option value="<?= $asal_sekolah->id; ?>">
                         <?= $asal_sekolah->nama; ?>
                     </option>
                     <?php endforeach; ?>
                 </select>
             </span>
         </div>
-        <div style="margin
-top: 1em"><b>Status Pembayaran : </b></div>
+        <div style="margin-top: 1em"><b>Status Pembayaran : </b></div>
         <div style="margin-top: 0; float:left">
             <span>
                 <input type="radio" name="status_kredit" value="0">
-                >
                 <label for="Tunai">Tunai</label><br>
             </span>
             <span>
-                <input type="radio" name="status_kredit" value="1" <label for="Kredit">Kredit</label><br>
+                <input type="radio" name="status_kredit" value="1"> 
+                <label for="Kredit">Kredit</label><br>
             </span>
         </div>
         <div style="clear:both"></div>
-        <button type="submit" style="margin
-top: 20px">Simpan</button>
+        <button type="submit" style="margin-top: 20px">Simpan</button>
     </form>
 </body>
 <script>
@@ -63,8 +56,7 @@ top: 20px">Simpan</button>
         field: document.getElementById('datepicker'),
         format: 'D/M/YYYY',
         toString(date, format) {
-// you should do formatting based on the passed format
-,
+        // you should do formatting based on the passed format,
         // but we will just return 'D/M/YYYY' for simplicity
         const day = date.getDate();
         const month = date.getMonth() + 1;
